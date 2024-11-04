@@ -8,11 +8,17 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import LvButton from './shared/components/lvButton';
+import ScreenA from './screens/ScreenA';
+import ScreenB from './screens/ScreenB';
+import ScreenC from './screens/ScreenC';
 
-function App(): React.JSX.Element {
+function App() {
   return (
     <SafeAreaView style={styles.container}>
       <LvButton title="Click me" onPress={() => {}} preset="outline" />
+      <ScreenA />
+      <ScreenB />
+      <ScreenC />
     </SafeAreaView>
   );
 }
