@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import LvButton from '../../shared/components/lvButton';
+import LvButton from '../../shared/components/LvButton';
 import {useBearStore} from '../../store';
 
 const ScreenA: React.FC = () => {

@@ -7,7 +7,7 @@
 
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import LvButton from './shared/components/lvButton';
+import LvButton from './shared/components/LvButton';
 import ScreenA from './screens/ScreenA';
 import ScreenB from './screens/ScreenB';
 import ScreenC from './screens/ScreenC';

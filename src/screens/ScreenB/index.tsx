@@ -1,12 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {useBearStore} from '../../store';
-import {useShallow} from 'zustand/shallow';
+import {useBear} from '../../store/selectors/bearSelector';
 
-const ScreenA: React.FC = () => {
-  const {nuts, bears} = useBearStore(
-    useShallow(state => ({nuts: state.nuts, bears: state.bears})),
-  );
+const ScreenB: React.FC = () => {
+  const bears = useBear.use.bears();
+  const bears2 = useBear.use.bears2();
 
   console.log('render ScreenB');
 
@@ -14,7 +12,7 @@ const ScreenA: React.FC = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Bear Counter</Text>
       <Text style={styles.counter}>{bears}</Text>
-      <Text style={styles.counter}>{nuts}</Text>
+      <Text style={styles.counter}>{bears2}</Text>
     </View>
   );
 };
@@ -37,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ScreenA;
+export default ScreenB;
