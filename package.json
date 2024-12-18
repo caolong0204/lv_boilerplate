@@ -1,5 +1,5 @@
 {
-  "name": "LV_boilerplate",
+  "name": "lvboilerplate",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,20 +11,22 @@
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-native": "0.76.1",
-    "zustand": "^5.0.1"
+    "react-native": "0.76.5",
+    "react-native-gesture-handler": "^2.21.2",
+    "react-native-reanimated": "^3.16.5",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
-    "@react-native-community/cli": "15.0.0",
-    "@react-native-community/cli-platform-android": "15.0.0",
-    "@react-native-community/cli-platform-ios": "15.0.0",
-    "@react-native/babel-preset": "0.76.1",
-    "@react-native/eslint-config": "0.76.1",
-    "@react-native/metro-config": "0.76.1",
-    "@react-native/typescript-config": "0.76.1",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native-community/cli-platform-ios": "15.0.1",
+    "@react-native/babel-preset": "0.76.5",
+    "@react-native/eslint-config": "0.76.5",
+    "@react-native/metro-config": "0.76.5",
+    "@react-native/typescript-config": "0.76.5",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
