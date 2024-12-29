@@ -24,7 +24,7 @@ function RightAction(prog: SharedValue<number>, drag: SharedValue<number>) {
   );
 }
 
-export default function Ball() {
+export default function SwipeItem() {
   return (
     <ReanimatedSwipeable
       containerStyle={styles.swipeable}

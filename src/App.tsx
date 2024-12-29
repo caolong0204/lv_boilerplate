@@ -6,17 +6,17 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import Ball from './screens/Ball';
-
+import ChatScreen from './screens/ChatScreen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 function App() {
   return (
-    <GestureHandlerRootView style={styles.container}>
-      <SafeAreaView style={styles.container}>
-        <Ball />
-      </SafeAreaView>
-    </GestureHandlerRootView>
+    <SafeAreaProvider>
+      <GestureHandlerRootView style={styles.container}>
+        <ChatScreen />
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
   );
 }
 
