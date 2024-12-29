@@ -25,6 +25,8 @@ export default function ChatScreen() {
   const botMessageHeight = useSharedValue(0);
 
   const handleSendMessager = (value: string) => {
+    userMessageHeight.value = 0;
+    botMessageHeight.value = 0;
     setMessagesHistory(history => [
       ...history,
       {type: 'user', content: value, id: uuid.v4()},
@@ -35,8 +37,22 @@ export default function ChatScreen() {
       },
     ]);
     setTimeout(() => {
-      flatListRef.current?.scrollToEnd();
-    });
+      flatListRef.current?.scrollToIndex({
+        index: messagesHistory.length,
+        animated: true,
+      });
+    }, 0);
+    setTimeout(() => {
+      setMessagesHistory(history => [
+        ...history.slice(0, history.length - 1),
+        {
+          type: 'bot',
+          content:
+            'Hello there, thank you for sending me your questionHello there, thank you for sending me your questionHello there, thank you for sending me your question',
+          id: uuid.v4(),
+        },
+      ]);
+    }, 2000);
   };
 
   const onLayout = useCallback((type: string) => {
